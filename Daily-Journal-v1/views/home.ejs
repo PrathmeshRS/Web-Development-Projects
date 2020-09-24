@@ -1,0 +1,12 @@
+<%- include('partials/header'); %>
+    <div class="group">
+        <h1>Home</h1>
+        <p><%=starting %> </p>
+    </div>
+    <% posts.forEach(element => { %>
+        <div class="group">
+            <h2><%=element.title%></h2>
+            <p><%-element.content.slice(0, 340)+" ..."%> <a href="/posts/<%=element.title%>">Read more</a> </p>
+        </div>
+    <% }); %> 
+<%- include('partials/footer'); %> 

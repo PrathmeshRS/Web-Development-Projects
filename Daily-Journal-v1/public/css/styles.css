@@ -1,0 +1,64 @@
+body {
+    background-image: url('https://source.unsplash.com/daily?landscape,iceland/1600x900');
+    background-size: cover;
+}
+
+h1, h2{
+    color: darkcyan;
+    font-weight: bolder;
+    font-family: 'Pangolin', cursive;
+}
+
+p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: medium;
+}
+
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: small;
+    letter-spacing: 5px;
+    font-family: 'Pangolin', cursive;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.group {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1em;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 1.5rem;
+    font-family: Helvetica, sans-serif;
+}
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: black;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+    color: #fff;
+}
+
+.footer p:hover{
+    
+}
