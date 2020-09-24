@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://prathmesh:Sadguru789@cluster0.fqplu.mongodb.net/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 const itemsSchema = new mongoose.Schema({
     name: String
@@ -126,4 +126,4 @@ app.post("/", (req, res) => {
     
 });
 
-app.listen(3000, (req, res) => console.log("Server started on port 3000"));
+app.listen(process.env.PORT || 3000, function(){ console.log("Server started on port 3000")});
