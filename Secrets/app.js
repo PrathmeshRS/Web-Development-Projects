@@ -1,9 +1,11 @@
 //jshint esversion:6
+// dotenv package for security
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
-const encrypt = require('mongoose-encryption');
+const encrypt = require('mongoose-encryption'); 
 
 const app = express();
 
@@ -21,9 +23,8 @@ const userSchema = new mongoose.Schema({
 });
 
 // The salt for encryption
-const secret = "IamAgreatWebdeveloPer";
 // The database will be encrypted, but only the password field will be encrypted. 
-userSchema.plugin(encrypt, {secret: secret, encryptedFields:['password']});
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields:['password']});
 
 const User = new mongoose.model("User", userSchema);
 
